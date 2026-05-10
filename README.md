@@ -1,52 +1,23 @@
 # AI PDF Analyzer
 
-AI-powered academic PDF analysis system using LLMs, RAG, and semantic document intelligence.
+Local AI-powered academic paper analyzer using FastAPI and Ollama.
 
 ## Features
-
+- Academic text analysis
 - PDF upload and parsing
-- AI summarization
-- Keyword extraction
-- DOI detection
-- IMRAD analysis
-- Semantic document search
-- Academic research assistance
+- AI-generated summaries
+- Local LLM processing
+- No OpenAI API cost
 
 ## Technologies
-
 - Python
 - FastAPI
-- LangChain
-- OpenAI API
-- ChromaDB
+- Ollama
+- Llama3
 - PyPDF
 
-## Architecture
+## Run locally
 
-- PDF Processing
-- Text Chunking
-- Embedding Generation
-- Vector Database Retrieval
-- LLM-based Analysis
-
-## Installation
-
+```bash
 pip install -r requirements.txt
-
-## Run
-
 uvicorn main:app --reload
-
-## Future Improvements
-
-- Multi-agent workflows
-- OJS integration
-- Crossref metadata validation
-- Citation analysis
-- AI reviewer assistant
-
-## Author
-
-Lazar Stošić  
-Professor of Computer Science  
-AI • Educational Technology • LLM Engineering
