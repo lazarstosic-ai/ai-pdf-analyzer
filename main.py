@@ -68,4 +68,4 @@ async def upload_pdf(file: UploadFile = File(...)):
         "filename": file.filename,
         "characters": len(text),
         "ai_analysis": response["message"]["content"]
-    }
+    }```bash id="3z7uk2"
