@@ -11,7 +11,7 @@ from fastapi.responses import HTMLResponse
 from pypdf import PdfReader
 
 
-MODEL_NAME = "llama3"
+MODEL_NAME = "phi3"
 MAX_TEXT_CHARS = 6000
 UPLOAD_DIR = "uploads"
 
@@ -736,7 +736,13 @@ async def upload_pdf_html(file: UploadFile = File(...)):
         </html>
         """
 
-        return html_report
+        return Response(
+    content=html_report,
+    media_type="text/html",
+    headers={
+        "Content-Disposition": "attachment; filename=ai_pdf_report.html"
+    }
+)
 
     finally:
         delete_temp_file(file_path)
